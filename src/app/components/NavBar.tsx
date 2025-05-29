@@ -3,13 +3,18 @@ import React from 'react'
 export const NavBar = () => {
   return (
     <>
-    <div>NavBar</div>
-    <div className='flex'>
-        <ul>Home</ul>
-        <ul>Projects</ul>
-        <ul>Skills</ul>
-        <ul>About</ul>
-        <ul>Contect</ul>
+    <div className='flex justify-around'>
+        <header>
+            <nav>
+                <div>
+                    <a href="home">Home</a>
+                    <a href="about">About</a>
+                    <a href="skills">Skills</a>
+                    <a href="projects">Projects</a>
+                    <a href="contect">contect</a>
+                </div>
+            </nav>
+        </header>
     </div>
     </>
   )
