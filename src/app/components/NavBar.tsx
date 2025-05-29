@@ -1,21 +1,22 @@
-import React from 'react'
+import React from "react";
+import Link from "next/link";
 
 export const NavBar = () => {
   return (
     <>
-    <div className='flex justify-around'>
+      <div className="flex justify-around">
         <header>
-            <nav>
-                <div>
-                    <a href="home">Home</a>
-                    <a href="about">About</a>
-                    <a href="skills">Skills</a>
-                    <a href="projects">Projects</a>
-                    <a href="contect">contect</a>
-                </div>
-            </nav>
+          <nav>
+            <div className="flex gap-4">
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
+              <Link href="/skills">Skills</Link>
+              <Link href="/projects">Projects</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
+          </nav>
         </header>
-    </div>
+      </div>
     </>
-  )
-}
+  );
+};
