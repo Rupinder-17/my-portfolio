@@ -11,10 +11,10 @@ export default function HomePage() {
     <div>
       <NavBar />
       <Home />
-      <Project />
-      <Skills />
-      <Contect />
       <About />
+      <Skills />
+      <Project />
+      <Contect />
     </div>
   );
 }
