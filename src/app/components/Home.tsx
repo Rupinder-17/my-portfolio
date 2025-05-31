@@ -7,47 +7,45 @@ import { motion } from "motion/react";
 
 export function Home() {
   return (
-    <Container className="relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center p-6 rounded-lg">
-      {/* Background mask effect */}
+    <Container className="relative w-full overflow-hidden bg-slate-900 flex flex-col  px-6 py-16 rounded-2xl shadow-xl">
+      {/* Radial background mask */}
       <div
-        className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none"
+        className="absolute inset-0 w-full h-full bg-slate-900 z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none"
         id="home"
       />
 
-      {/* Animated Background or Effect Component */}
+      {/* Optional animated or decorative component */}
       <Boxes />
 
-      {/* Main Text Content */}
-      <h1 className="relative z-30 text-white text-lg md:text-xl lg:text-2xl leading-relaxed max-w-4xl text-center">
-        Hi! I’m <span className="text-blue-400 font-semibold">Rupinder Kaur</span> — a passionate and dedicated web developer with a strong foundation in front-end technologies like <span className="text-yellow-400">HTML, CSS, JavaScript</span>, and <span className="text-cyan-400">React</span>. I love building clean, responsive, and user-friendly interfaces, often enhancing them with tools like <span className="text-pink-400">Tailwind CSS</span>, <span className="text-green-400">Framer Motion</span>, and <span className="text-orange-400">Toastify</span> for smooth interaction and feedback.
-        <br /><br />
-        I’ve worked on diverse projects, including food ordering apps, chat applications, and image sliders, always focusing on performance, usability, and a great user experience. I’m constantly learning, experimenting, and pushing myself to grow as a developer.
-        <br /><br />
-        Whether it’s crafting intuitive UI components or solving real-world problems through code, I’m always excited to turn ideas into interactive web experiences.
-      </h1>
+      {/* Content Container */}
+      <div className="relative z-30 max-w-4xl  space-y-6">
+        {/* Name + Role */}
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="text-4xl md:text-5xl font-bold text-white"
+        >
+          Hi! I’m <span className="text-blue-400">Rupinder Kaur</span>
+        </motion.h1>
 
-      {/* Optional Motion Header (commented in your code) */}
-      {/* 
-  <motion.h1
-    initial={{ opacity: 0, scale: 0 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{
-      duration: 0.4,
-      scale: { type: "spring", duration: 0.4, bounce: 0.5 },
-    }}
-    className="md:text-4xl text-3xl text-white font-bold mt-8 relative z-30 text-center"
-  >
-    Rupinder Kaur <br />
-    <span className="text-blue-400 text-xl">SOFTWARE DEVELOPER</span>
-  </motion.h1>
-  */}
+       <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+          A passionate <span className="text-yellow-400 font-semibold">front-end web developer</span> with a strong foundation in technologies like <span className="text-pink-400">HTML</span>, <span className="text-green-400">CSS</span>, <span className="text-blue-300">JavaScript</span>, and <span className="text-cyan-400">React</span>. I specialize in crafting clean, responsive, and user-friendly interfaces.
+        </p>
 
-      {/* Optional Tagline or Subtext */}
-      {/* 
-  <p className="text-center mt-4 text-neutral-300 relative z-30">
-    Framer Motion is the best animation library ngl
-  </p>
-  */}
+        <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+          I’ve built <span className="text-emerald-400 font-medium">food ordering apps</span>, <span className="text-orange-300 font-medium">chat applications</span>, and interactive <span className="text-purple-400 font-medium">image sliders</span>—always focusing on performance and user experience.
+        </p>
+
+        <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+          With tools like <span className="text-pink-300 font-medium">Tailwind CSS</span>, <span className="text-green-300 font-medium">Framer Motion</span>, and <span className="text-yellow-300 font-medium">Toastify</span>, I enhance web experiences to be smooth and interactive. I’m always experimenting, learning, and pushing boundaries to grow as a developer.
+        </p> 
+
+        <p className="text-lg md:text-xl text-gray-400 italic">
+          "Turning ideas into beautiful, functional digital experiences."
+        </p>
+      </div> 
     </Container>
+
   );
 }
