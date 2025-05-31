@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { NavBar } from "./components/NavBar";
+import {NavBar1 } from "./components/NavBar";
 import { Home } from "./components/Home";
 import { Project } from "./components/Project";
 import { Skills } from "./components/Skills";
@@ -9,7 +9,7 @@ import { About } from "./components/About";
 export default function HomePage() {
   return (
     <div>
-      <NavBar />
+      <NavBar1 />
       <Home />
       <About />
       <Skills />
