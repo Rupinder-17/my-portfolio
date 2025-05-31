@@ -14,85 +14,93 @@ import {
 } from "@/components/ui/resizable-navbar";
 const navItems = [
   {
-    name: "Features",
-    link: "#features",
+    name: "Home",
+    link: "#home",
   },
   {
-    name: "Pricing",
-    link: "#pricing",
+    name: "About",
+    link: "#about",
+  },
+  {
+    name: "Skills",
+    link: "#skills",
   },
   {
     name: "Contact",
     link: "#contact",
   },
+  {
+    name: "Project",
+    link: "#projects",
+  },
 ];
 
-const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-
 export const NavBar1 = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <div className="relative w-full">
-      <Navbar>
-        {/* Desktop Navigation */}
-        <NavBody>
-          <NavbarLogo />
-          <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Book a call</NavbarButton>
-          </div>
-        </NavBody>
-
-        {/* Mobile Navigation */}
-        <MobileNav>
-          <MobileNavHeader>
+    <nav className="sticky w-full z-50 top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/95 dark:border-gray-800 shadow-sm">
+      <div className="w-full">
+        <Navbar className="">
+          {/* Desktop Navigation */}
+          <NavBody>
             <NavbarLogo />
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
-          </MobileNavHeader>
-
-          <MobileNavMenu
-            isOpen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
-          >
-            {navItems.map((item, idx) => (
-              <a
-                key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
-              >
-                <span className="block">{item.name}</span>
-              </a>
-            ))}
-            <div className="flex w-full flex-col gap-4">
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Login
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
-              </NavbarButton>
+            <NavItems items={navItems} />
+            <div className="flex items-center gap-4">
+              {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
+              <NavbarButton variant="primary">Book a call</NavbarButton>
             </div>
-          </MobileNavMenu>
-        </MobileNav>
-      </Navbar>
-      <DummyContent />
+          </NavBody>
 
-      {/* Navbar */}
-    </div>
+          {/* Mobile Navigation */}
+          <MobileNav>
+            <MobileNavHeader>
+              <NavbarLogo />
+              <MobileNavToggle
+                isOpen={isMobileMenuOpen}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              />
+            </MobileNavHeader>
+
+            <MobileNavMenu
+              isOpen={isMobileMenuOpen}
+              onClose={() => setIsMobileMenuOpen(false)}
+            >
+              {navItems.map((item, idx) => (
+                <a
+                  key={`mobile-link-${idx}`}
+                  href={item.link}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="relative text-neutral-600 dark:text-neutral-300"
+                >
+                  <span className="block">{item.name}</span>
+                </a>
+              ))}
+              <div className="flex w-full flex-col gap-4">
+                <NavbarButton
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  variant="primary"
+                  className="w-full"
+                >
+                  Login
+                </NavbarButton>
+                <NavbarButton
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  variant="primary"
+                  className="w-full"
+                >
+                  Book a call
+                </NavbarButton>
+              </div>
+            </MobileNavMenu>
+          </MobileNav>
+        </Navbar>
+        {/* <DummyContent /> */}
+
+        {/* Navbar */}
+      </div>
+    </nav>
   );
-}
+};
 const DummyContent = () => {
   return (
     <div className="container mx-auto p-8 pt-24">
@@ -190,23 +198,21 @@ const DummyContent = () => {
   );
 };
 
+// return (
+//   <>
+//     <div className=" sticky top-0 z-50 flex justify-around  bg-amber-300">
+//       <header>
+//         <nav className=" ">
+//           <div className="flex gap-4">
+//             <Link href="/">Home</Link>
+//             <Link href="#about">About</Link>
+//             <Link href="#skills">Skills</Link>
+//             <Link href="#projects">Projects</Link>
+//             <Link href="#contact">Contact</Link>
+//           </div>
 
-  // return (
-  //   <>
-  //     <div className=" sticky top-0 z-50 flex justify-around  bg-amber-300">
-  //       <header>
-  //         <nav className=" ">
-  //           <div className="flex gap-4">
-  //             <Link href="/">Home</Link>
-  //             <Link href="#about">About</Link>
-  //             <Link href="#skills">Skills</Link>
-  //             <Link href="#projects">Projects</Link>
-  //             <Link href="#contact">Contact</Link>
-  //           </div>
-            
-  //         </nav>
-  //       </header>
-  //     </div>
-  //   </>
-  // );
-
+//         </nav>
+//       </header>
+//     </div>
+//   </>
+// );
