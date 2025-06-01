@@ -4,8 +4,6 @@ import { Boxes } from "../../components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import { Container } from "./Container";
 import { motion } from "framer-motion";
-// import "@uiw/react-md-editor/dist/mdeditor.css";
-// import "@uiw/react-markdown-preview/dist/markdown.css";
 import {
   DownloadIcon,
   GithubIcon,
@@ -30,6 +28,7 @@ const skills = [
   "TypeScript",
   "Node.js",
 ];
+// import * as card from "../../components/ui/card";
 // const code = `\`\`\`js
 // const rupinderKaurDetails = [
 //   {
@@ -41,9 +40,9 @@ const skills = [
 // ];
 // \`\`\``;
 
-export function Home() {
+export default function Home() {
   return (
-    <Container className="relative w-full overflow-hidden items-center justify-center bg-slate-900 flex flex-col px-6 py-16 rounded-2xl shadow-xl">
+    <Container className="relative w-full overflow-hidden items-center justify-center bg-slate-900 flex flex-col  px-6 py-16 rounded-2xl shadow-xl">
       {/* Background radial mask */}
       <div
         className="absolute inset-0 w-full h-full bg-slate-900 z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none"
@@ -52,7 +51,7 @@ export function Home() {
 
       <Boxes />
 
-      <div className="relative z-30 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="relative z-30 w-full  max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-16  items-center">
         <div>
           <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
@@ -140,36 +139,32 @@ export function Home() {
         </div>
 
         {/* Right content: image */}
-        <div className="relative w-full h-80  rounded-lg   shadow-5xl">
-          <Terminal>
-            <TypingAnimation>&gt; </TypingAnimation>
-            <AnimatedSpan delay={2000} className="text-green-500">
-              <span>✔ name: "Rupinder Kaur",</span>
-            </AnimatedSpan>
+        <div className="relative w-full rounded-lg shadow-2xl shadow-blue-900">
+          <div className="">
+            
+            <Terminal className="bg-transparent border-0 pl-5 ">
+              <TypingAnimation>&gt; </TypingAnimation>
+              <AnimatedSpan delay={1000} className="text-red-500 text-xl">
+                <span>✔ name: "Rupinder Kaur",</span>
+              </AnimatedSpan>
 
-            <AnimatedSpan delay={2500} className="text-green-500">
-              <span>✔ profession: "Developer",</span>
-            </AnimatedSpan>
-            <AnimatedSpan delay={2500} className="text-green-500">
-              <span>✔ interests: ["Innovative software solutions", "Efficient coding"],</span>
-            </AnimatedSpan>
-            <AnimatedSpan delay={2500} className="text-green-500">
-              <span>✔  skills: ["HTML", "CSS", "JavaScript", "ReactJS", "GitHub , Tailwind css","NextJS", "ReactNative"],</span>
-            </AnimatedSpan>
-            <AnimatedSpan delay={2500} className="text-green-500">
-              <span>✔ "problem Solver: ture</span>
-            </AnimatedSpan>
+              <AnimatedSpan delay={1500} className="text-blue-500 text-xl">
+                <span>✔ profession: "Developer",</span>
+              </AnimatedSpan>
+              <AnimatedSpan delay={2000} className="text-cyan-500 text-xl">
+                <span>✔ interests: ["Innovative software solutions", "Efficient coding"],</span>
+              </AnimatedSpan>
+              <AnimatedSpan delay={2500} className="text-amber-500 text-xl">
+                <span>✔  skills: ["HTML", "CSS", "JavaScript", "ReactJS", "GitHub , 
+                  Tailwind css","NextJS", "ReactNative"],</span>
+              </AnimatedSpan>
+              <AnimatedSpan delay={3000} className="text-emerald-700 text-xl pb-4">
+                <span>✔ "Problem Solver: ture</span>
+              </AnimatedSpan>
+            </Terminal>
+          </div>
 
-            {/* <AnimatedSpan delay={1000} className="text-green-500">
-              <span>
-                <MDEditor.Markdown
-                  source={code}
-                  className="prose prose-invert text-gray-300 bg-transparent"
-                />
-              </span>
-            </AnimatedSpan> */}
-          </Terminal>
-          <BorderBeam duration={8} size={100} className="absolute inset-0 z-10"/>
+          <BorderBeam duration={8} size={100} />
         </div>
       </div>
     </Container>
