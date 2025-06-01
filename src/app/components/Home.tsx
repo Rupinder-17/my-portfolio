@@ -12,6 +12,26 @@ import {
   MapPinIcon,
   CalendarIcon,
 } from "lucide-react";
+// import { Button } from "../../components/magicui/border-beam";
+
+// import {
+//   Card,
+//   CardContent,
+//   CardDescription,
+//   CardFooter,
+//   CardHeader,
+//   CardTitle,
+// } from "../../components/magicui/border-beam";
+// import { Input } from "@/components/ui/input";
+// import { Label } from "@/components/ui/label";
+import { BorderBeam } from "@/components/magicui/border-beam";
+import MDEditor from "@uiw/react-md-editor";
+import {
+  AnimatedSpan,
+  Terminal,
+  TypingAnimation,
+} from "@/components/magicui/terminal";
+
 
 const skills = [
   "React",
@@ -21,6 +41,17 @@ const skills = [
   "TypeScript",
   "Node.js",
 ];
+const code = `\`\`\`js
+const rupinderKaurDetails = [
+  {
+    name: "Rupinder Kaur",
+    profession: "Developer",
+    interests: ["Innovative software solutions", "Efficient coding"],
+    skills: ["HTML", "CSS", "JavaScript", "React", "GitHub , Tailwind css"]
+  }
+];
+\`\`\``;
+
 
 export function Home() {
   return (
@@ -34,7 +65,6 @@ export function Home() {
       <Boxes />
 
       <div className="relative z-30 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Left content: bio */}
         <div>
           <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
@@ -122,12 +152,20 @@ export function Home() {
         </div>
 
         {/* Right content: image */}
-        <div className="relative w-full  bg-amber-50 h-80 rounded-lg overflow-hidden shadow-xl">
-          <img
-            src="/your-photo.jpg"
-            alt="Rupinder Kaur"
-            className="w-full h-full object-cover"
-          />
+        <div className="relative w-full h-80  rounded-lg   shadow-5xl">
+          <Terminal>
+            <TypingAnimation>&gt; </TypingAnimation>
+
+            <AnimatedSpan delay={1500} className="text-green-500">
+              <span>
+                <MDEditor.Markdown
+                  source={code}
+                  className="text-gray-800 dark:text-gray-800  dark:bg-black"
+                />
+              </span>
+            </AnimatedSpan>
+          </Terminal>
+          <BorderBeam duration={8} size={100} />
         </div>
       </div>
     </Container>
