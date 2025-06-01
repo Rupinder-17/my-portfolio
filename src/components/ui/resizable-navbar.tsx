@@ -68,8 +68,8 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   return (
     <motion.div
       ref={ref}
-      // Changed from top-20 to top-0 to make navbar stick to the top
-      className={cn("sticky inset-x-0 top-0 z-40 w-full", className)}
+      // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
+      className={cn("sticky inset-x-0 top-20 z-40 w-full", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)

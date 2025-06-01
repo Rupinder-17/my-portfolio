@@ -4,6 +4,8 @@ import { Boxes } from "../../components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import { Container } from "./Container";
 import { motion } from "framer-motion";
+// import "@uiw/react-md-editor/dist/mdeditor.css";
+// import "@uiw/react-markdown-preview/dist/markdown.css";
 import {
   DownloadIcon,
   GithubIcon,
@@ -12,26 +14,13 @@ import {
   MapPinIcon,
   CalendarIcon,
 } from "lucide-react";
-// import { Button } from "../../components/magicui/border-beam";
-
-// import {
-//   Card,
-//   CardContent,
-//   CardDescription,
-//   CardFooter,
-//   CardHeader,
-//   CardTitle,
-// } from "../../components/magicui/border-beam";
-// import { Input } from "@/components/ui/input";
-// import { Label } from "@/components/ui/label";
 import { BorderBeam } from "@/components/magicui/border-beam";
-import MDEditor from "@uiw/react-md-editor";
+// import MDEditor from "@uiw/react-md-editor";
 import {
   AnimatedSpan,
   Terminal,
   TypingAnimation,
 } from "@/components/magicui/terminal";
-
 
 const skills = [
   "React",
@@ -41,17 +30,16 @@ const skills = [
   "TypeScript",
   "Node.js",
 ];
-const code = `\`\`\`js
-const rupinderKaurDetails = [
-  {
-    name: "Rupinder Kaur",
-    profession: "Developer",
-    interests: ["Innovative software solutions", "Efficient coding"],
-    skills: ["HTML", "CSS", "JavaScript", "React", "GitHub , Tailwind css"]
-  }
-];
-\`\`\``;
-
+// const code = `\`\`\`js
+// const rupinderKaurDetails = [
+//   {
+//     name: "Rupinder Kaur",
+//     profession: "Developer",
+//     interests: ["Innovative software solutions", "Efficient coding"],
+//     skills: ["HTML", "CSS", "JavaScript", "React", "GitHub , Tailwind css"]
+//   }
+// ];
+// \`\`\``;
 
 export function Home() {
   return (
@@ -155,17 +143,33 @@ export function Home() {
         <div className="relative w-full h-80  rounded-lg   shadow-5xl">
           <Terminal>
             <TypingAnimation>&gt; </TypingAnimation>
+            <AnimatedSpan delay={2000} className="text-green-500">
+              <span>✔ name: "Rupinder Kaur",</span>
+            </AnimatedSpan>
 
-            <AnimatedSpan delay={1500} className="text-green-500">
+            <AnimatedSpan delay={2500} className="text-green-500">
+              <span>✔ profession: "Developer",</span>
+            </AnimatedSpan>
+            <AnimatedSpan delay={2500} className="text-green-500">
+              <span>✔ interests: ["Innovative software solutions", "Efficient coding"],</span>
+            </AnimatedSpan>
+            <AnimatedSpan delay={2500} className="text-green-500">
+              <span>✔  skills: ["HTML", "CSS", "JavaScript", "ReactJS", "GitHub , Tailwind css","NextJS", "ReactNative"],</span>
+            </AnimatedSpan>
+            <AnimatedSpan delay={2500} className="text-green-500">
+              <span>✔ "problem Solver: ture</span>
+            </AnimatedSpan>
+
+            {/* <AnimatedSpan delay={1000} className="text-green-500">
               <span>
                 <MDEditor.Markdown
                   source={code}
-                  className="text-gray-800 dark:text-gray-800  dark:bg-black"
+                  className="prose prose-invert text-gray-300 bg-transparent"
                 />
               </span>
-            </AnimatedSpan>
+            </AnimatedSpan> */}
           </Terminal>
-          <BorderBeam duration={8} size={100} />
+          <BorderBeam duration={8} size={100} className="absolute inset-0 z-10"/>
         </div>
       </div>
     </Container>

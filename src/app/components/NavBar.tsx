@@ -40,10 +40,10 @@ const navItems = [
 export const NavBar1 = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <nav className="sticky w-full z-50 top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/95 dark:border-gray-800 shadow-sm">
+    <nav className="fixed w-full z-50 top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/95 dark:border-gray-800 shadow-sm">
 
-    <div className="w-full">
-      <Navbar className="">
+    <div className="relative w-full  z-50 top-0">
+      <Navbar className="sticky  top-0">
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
