@@ -11,7 +11,7 @@ export default function HomePage() {
     <div>
       <NavBar1 />
       <Home />
-      <About />
+      {/* <About /> */}
       <Skills />
       <Project />
       <Contect />
