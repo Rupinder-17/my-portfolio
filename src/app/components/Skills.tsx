@@ -132,7 +132,7 @@ const SkillCard = ({ skill, description, logo, category, level, color }: any) =>
       {/* Logo and title */}
       <div className="flex items-center gap-4 mb-4 relative z-10">
         <div className="relative">
-          <div className="w-12 h-12 rounded-xl bg-gray-900 border border-gray-800 p-2 group-hover:border-gray-700 transition-colors duration-300 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-xl bg-gray-100 border border-gray-800 p-2 group-hover:border-gray-700 transition-colors duration-300 flex items-center justify-center">
             <img
               src={logo || "/placeholder.svg"}
               alt={skill}
