@@ -4,7 +4,10 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { SparklesCore } from "@/components/ui/sparkles";
 import * as Sparkles from "@/components/ui/sparkles";
+import quizapp from "../../images/QuizApp.png"
+import weather from "../../images/weather-App.png"
 
+import rider from "../../images/riderApp.png"
 
 export const Project = () => {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -18,7 +21,7 @@ export const Project = () => {
       description: "A quiz application that provides an engaging and interactive user experience.",
       link: "https://quizz-app-rosy.vercel.app/",
       technologies: ["React", "Interactive UI", "Quiz Features"],
-      image: "/placeholder.svg?height=300&width=400",
+      image: quizapp,
       category: "Web App",
       featured: true,
     },
@@ -28,7 +31,7 @@ export const Project = () => {
         "An app where users can purchase food and drinks. The purchased items are displayed in a list along with their count.",
       link: "https://rider-app-ten.vercel.app/",
       technologies: ["React", "State Management", "UI Design"],
-      image: "/placeholder.svg?height=300&width=400",
+      image: rider,
       category: "Web App",
       featured: true,
     },
@@ -37,7 +40,7 @@ export const Project = () => {
       description: "A website that provides real-time weather updates with a responsive and clean design.",
       link: "https://weather-app-js-psi.vercel.app/",
       technologies: ["HTML", "CSS", "JavaScript"],
-      image: "/placeholder.svg?height=300&width=400",
+      image: weather,
       category: "Web App",
     },
     {
@@ -160,7 +163,7 @@ export const Project = () => {
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project?.image }
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
