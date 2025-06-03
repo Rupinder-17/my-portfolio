@@ -3,6 +3,10 @@
 import { Container } from "./Container"
 import { Marquee } from "@/components/magicui/marquee"
 import { motion } from "framer-motion"
+// import * as sparkles from "../ui/sparkles";
+import { SparklesCore } from "@/components/ui/sparkles";
+// import { Sparkles } from "lucide-react";
+import * as Sparkles from "@/components/ui/sparkles";
 
 const skills = [
   {
@@ -160,7 +164,7 @@ const SkillCard = ({ skill, description, logo, category, level, color }: any) =>
 
 export function Skills() {
   return (
-    <section id="skills" className="relative w-full py-24 overflow-hidden bg-black">
+    <section id="skills" className="relative w-full   overflow-hidden bg-black">
       {/* Subtle background pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.02),transparent_50%)]" />
@@ -175,23 +179,47 @@ export function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center "
         >
-          <h2 className="text-5xl font-bold text-white mb-4">
-            My <span className="bg-gradient-to-r from-gray-300 to-gray-500 bg-clip-text text-transparent">Skills</span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <div className=" w-full bg-black flex flex-col items-center  overflow-hidden rounded-md">
+            <h1 className="md:text-2xl text-3xl lg:text-4xl font-bold text-center text-white relative z-20">
+              Skills
+            </h1>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             A comprehensive overview of my technical expertise and the tools I use to bring ideas to life
           </p>
+            <div className="w-[40rem] h-15 relative">
+              {/* Gradients */}
+              <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-pink-500 to-transparent h-[2px] w-3/4 blur-sm" />
+              <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+              <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+              <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+
+              {/* Core component */}
+              {/* <Sparkles.SparklesCore
+                background="transparent"
+                minSize={0.4}
+                maxSize={1}
+                particleDensity={1200}
+                className="w-full h-full"
+                particleColor="#FFFFFF"
+              /> */}
+
+              {/* Radial Gradient to prevent sharp edges */}
+              <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+            </div>
+          </div>
+          {/* <h2 className="text-5xl font-bold text-white mb-4">
+            My <span className="bg-gradient-to-r from-gray-300 to-gray-500 bg-clip-text text-transparent">Skills</span>
+          </h2> */}
+         
 
           {/* Decorative line */}
-          <div className="flex items-center justify-center mt-6">
-            <div className="h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent w-64" />
-          </div>
+        
         </motion.div>
 
         {/* Skills marquee */}
-        <div className="space-y-8">
+        <div className="space-y-8 ">
           <Marquee pauseOnHover className="[--duration:25s]" gradient={false}>
             {firstRow.map((skill) => (
               <SkillCard key={skill.skill} {...skill} />

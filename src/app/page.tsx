@@ -5,6 +5,7 @@ import { Project } from "./components/Project";
 import { Skills } from "./components/Skills";
 import { Contect } from "./components/Contect";
 import { About } from "./components/About";
+// import { Skills } from "@/components/Skills";
 
 export default function HomePage() {
   return (
@@ -12,7 +13,7 @@ export default function HomePage() {
       <NavBar1 />
       <Home />
       {/* <About /> */}
-      <Skills />
+      <Skills/>
       <Project />
       <Contect />
     </div>
