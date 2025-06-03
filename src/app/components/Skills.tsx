@@ -181,7 +181,7 @@ export function Skills() {
           viewport={{ once: true }}
           className="text-center "
         >
-          <div className=" w-full bg-black flex flex-col items-center  overflow-hidden rounded-md">
+          <div className=" w-full bg-black flex flex-col items-center   overflow-hidden rounded-md">
             <h1 className="md:text-2xl text-3xl lg:text-4xl font-bold text-center text-white relative z-20">
               Skills
             </h1>
