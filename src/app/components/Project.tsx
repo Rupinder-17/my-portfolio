@@ -6,8 +6,8 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import * as Sparkles from "@/components/ui/sparkles";
 import quizapp from "../../images/QuizApp.png"
 import weather from "../../images/weather-App.png"
-
 import rider from "../../images/riderApp.png"
+import Image from "next/image";
 
 export const Project = () => {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -160,14 +160,18 @@ export const Project = () => {
               onMouseEnter={() => setHoveredProject(index)}
               onMouseLeave={() => setHoveredProject(null)}
             >
+             
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
-                <img
-                  src={project?.image }
+                <Image
+                  src={project?.image}
                   alt={project.title}
+                  height={400}
+                  width={450}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                
+                <div className="absolute inset-0 bg-black/10 bg-opacity-40 group-hover:bg-opacity-20 transition-all duration-300"></div>
 
                 {/* Category Badge */}
                 <div className="absolute top-3 left-3">
