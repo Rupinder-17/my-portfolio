@@ -4,14 +4,15 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { SparklesCore } from "@/components/ui/sparkles";
 import * as Sparkles from "@/components/ui/sparkles";
-import quizapp from "../../images/QuizApp.png"
-import weather from "../../images/weather-App.png"
-import rider from "../../images/riderApp.png"
+import quizapp from "@/app/images/QuizApp.png"
+import weather from "@/app/images/weather-App.png"
+import rider from "@/app/images/riderApp.png"
 import Image from "next/image";
+import chat from "@/app/images/ChatGPT Image Jun 3, 2025, 11_17_59 PM.png"
 
 export const Project = () => {
   const [activeCategory, setActiveCategory] = useState("All")
-  const [hoveredProject, setHoveredProject] = useState(null)
+  // const [hoveredProject, setHoveredProject] = useState()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -56,7 +57,7 @@ export const Project = () => {
       title: "Chat App",
       description: "A real-time chat application that allows users to communicate with each other in real-time.",
       link: "https://free-api-chat.vercel.app/register",
-      image: "/placeholder.svg?height=300&width=400",
+      image: chat,
       technologies: ["React", "Tailwind CSS", "UI Design"],
       category: "Web App",
       featured: true,
@@ -157,8 +158,8 @@ export const Project = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-gray-600 transition-all duration-300"
-              onMouseEnter={() => setHoveredProject(index)}
-              onMouseLeave={() => setHoveredProject(null)}
+              // onMouseEnter={() => setHoveredProject(index as number)}
+              // onMouseLeave={() => setHoveredProject(null)}
             >
              
               {/* Project Image */}

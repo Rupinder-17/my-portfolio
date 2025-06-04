@@ -220,13 +220,13 @@ export function Skills() {
 
         {/* Skills marquee */}
         <div className="space-y-8 ">
-          <Marquee pauseOnHover className="[--duration:25s]" gradient={false}>
+          <Marquee pauseOnHover className="[--duration:25s]">
             {firstRow.map((skill) => (
               <SkillCard key={skill.skill} {...skill} />
             ))}
           </Marquee>
 
-          <Marquee reverse pauseOnHover className="[--duration:30s]" gradient={false}>
+          <Marquee reverse pauseOnHover className="[--duration:30s]">
             {secondRow.map((skill) => (
               <SkillCard key={skill.skill} {...skill} />
             ))}
