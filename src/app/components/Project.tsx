@@ -9,8 +9,8 @@ import weather from "@/app/images/weather-App.png"
 import rider from "@/app/images/riderApp.png"
 import Image from "next/image";
 import chat from "@/app/images/ChatGPT Image Jun 3, 2025, 11_17_59 PM.png"
-import insta from "@/app/images/ChatGPT Image Jun 5, 2025, 07_27_56 AM.png"
-import slider from "@/app/images/ChatGPT Image Jun 5, 2025, 07_41_53 AM.png"
+import slider from "@/app/images/ChatGPT Image Jun 5, 2025, 07_27_56 AM.png"
+import insta from "@/app/images/ChatGPT Image Jun 5, 2025, 07_41_53 AM.png"
 
 export const Project = () => {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -51,7 +51,7 @@ export const Project = () => {
       description:
         "A dynamic image slider application with smooth transitions, allowing users to navigate through various images.",
       link: "https://image-slider-two-liart.vercel.app/",
-      image: insta,
+      image: slider,
       technologies: ["React", "CSS Transitions"],
       category: "Component",
     },
@@ -68,7 +68,7 @@ export const Project = () => {
       title: "Social Media App",
       description: "A social media platform where users can connect, share posts, and interact with others.",
       link: "https://social-media-app-ruddy-chi.vercel.app/",
-      image: slider,
+      image: insta,
       technologies: ["React", "Tailwind CSS", "UI Design"],
       category: "Web App",
     },
