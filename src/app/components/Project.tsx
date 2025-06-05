@@ -51,7 +51,7 @@ export const Project = () => {
       description:
         "A dynamic image slider application with smooth transitions, allowing users to navigate through various images.",
       link: "https://image-slider-two-liart.vercel.app/",
-      image: slider,
+      image: insta,
       technologies: ["React", "CSS Transitions"],
       category: "Component",
     },
@@ -68,7 +68,7 @@ export const Project = () => {
       title: "Social Media App",
       description: "A social media platform where users can connect, share posts, and interact with others.",
       link: "https://social-media-app-ruddy-chi.vercel.app/",
-      image: insta,
+      image: slider,
       technologies: ["React", "Tailwind CSS", "UI Design"],
       category: "Web App",
     },
