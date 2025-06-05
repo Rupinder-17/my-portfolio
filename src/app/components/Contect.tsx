@@ -3,6 +3,8 @@ import { motion } from "motion/react";
 import React from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { ShineBorder } from "@/components/magicui/shine-border";
+import { SparklesText } from "@/components/magicui/sparkles-text"
+
 
 export function Contect() {
   return (
@@ -10,25 +12,26 @@ export function Contect() {
       <AuroraBackground>
         <div>
           <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-cyan-400 mb-3"
-            >
-              Get In Touch
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-gray-100 text-base md:text-lg text-center max-w-2xl mx-auto px-4"
-            >
-              Let's work together to bring your ideas to life
-            </motion.p>
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-gray-400 mb-3 py-8"
+          >
+            <SparklesText>Get In Touch</SparklesText>
+
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-gray-100 text-base md:text-lg text-center max-w-2xl mx-auto px-4"
+          >
+            Let's work together to bring your ideas to life
+          </motion.p>
         </div>
 
-        <div className="flex justify-center gap-56 py-24">
-         
+        <div className="flex justify-center gap-14 py-24">
+
           <motion.div
             className="h-[] w-[40%]"
             initial={{ opacity: 0, x: -50 }}
@@ -134,96 +137,96 @@ export function Contect() {
           </motion.div>
 
 
-             <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="relative w-[35%] "
-            >
-              <div className=" bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden">
-                <div className="p-2 md:p-12">
-                  <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="relative w-[35%] "
+          >
+            <div className=" bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden">
+              <div className="p-2 md:p-12">
+                <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
 
-                 
-                  <form
 
-                    className="backdrop-blur-sm h-fit  rounded-2xl p-8"
-                  >
-                    <h2 className="text-2xl font-bold text-white mb-6">Send Message</h2>
+                <form
 
-                    <div className="space-y-3">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                          Your Name
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          // value={formData.name}
-                          // onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all"
-                          placeholder="Enter your name"
-                          required
-                        />
-                      </div>
+                  className="backdrop-blur-sm h-fit  rounded-2xl p-8"
+                >
+                  <h2 className="text-2xl font-bold text-white mb-6">Send Message</h2>
 
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                          Email Address
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          // value={formData.email}
-                          // onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all"
-                          placeholder="Enter your email"
-                          required
-                        />
-                      </div>
-
-                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                          Message
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          // value={formData.message}
-                          // onChange={handleChange}
-                          rows={5}
-                          className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all resize-none"
-                          placeholder="Enter your message"
-                          required
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        className="w-full py-3 px-6 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/30 hover:bg-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-105"
-                      >
-                        Send Message
-                      </button>
+                  <div className="space-y-3">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                        Your Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        // value={formData.name}
+                        // onChange={handleChange}
+                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all"
+                        placeholder="Enter your name"
+                        required
+                      />
                     </div>
-                  </form>
-                  {/* </motion.div> */}
+
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        // value={formData.email}
+                        // onChange={handleChange}
+                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                        Message
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        // value={formData.message}
+                        // onChange={handleChange}
+                        rows={5}
+                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all resize-none"
+                        placeholder="Enter your message"
+                        required
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full py-3 px-6 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/30 hover:bg-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-105"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+                {/* </motion.div> */}
 
 
-                </div>
               </div>
+            </div>
 
 
-             </motion.div> 
-          </div>
+          </motion.div>
+        </div>
 
       </AuroraBackground >
-        </div>
+    </div>
 
     // </div >
   );

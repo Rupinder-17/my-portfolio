@@ -100,7 +100,7 @@ export const Project = () => {
           >
            
           </motion.h2>
-          <div className=" w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+          <div className=" w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
             <h1 className="md:text-7xl text-3xl lg:text-4xl font-bold text-center text-white relative z-20">
               My Projects
             </h1>
@@ -125,7 +125,7 @@ export const Project = () => {
                 minSize={0.4}
                 maxSize={1}
                 particleDensity={1200}
-                className="w-full h-full"
+                className=""
                 particleColor="#FFFFFF"
               />
 
