@@ -6,7 +6,9 @@ import { ShineBorder } from "@/components/magicui/shine-border";
 import { SparklesText } from "@/components/magicui/sparkles-text"
 
 
+
 export function Contect() {
+
   return (
     <div>
       <AuroraBackground>
