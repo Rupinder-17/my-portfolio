@@ -49,7 +49,7 @@ export const NavBar1 = () => {
         {/* Desktop Navigation */}
         <NavBody>
           {/* <NavbarLogo /> */}
-          <Image src={logo} alt=""height={100} width={70} className="rounded-4xl"/>
+          <Image src={logo} alt=""height={55} width={45} className="rounded-4xl"/>
           
           <NavItems items={navItems} />
           {/* <div className="flex items-center gap-4">
