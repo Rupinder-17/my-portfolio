@@ -4,6 +4,7 @@ import { Boxes } from "../../components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import { Container } from "./Container";
 import { motion } from "framer-motion";
+
 import {
   DownloadIcon,
   GithubIcon,
@@ -145,7 +146,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
 
-            href="/rupinder-kaur-cv.pdf"
+            href="/resume.pdf"
             download
             className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
           >
