@@ -51,12 +51,17 @@ export default function Home() {
 
       <Boxes />
 
-      <div className="relative z-30 w-full  max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-16  items-center">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+       className="relative z-30 w-full  max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-16  items-center">
         <div>
           <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.1, ease: "easeOut" }}
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
             Hi! I’m <span className="text-blue-400">Rupinder Kaur</span>
@@ -135,14 +140,18 @@ export default function Home() {
             </a>
           </div>
 
-          <a
+          <motion.a
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+
             href="/rupinder-kaur-cv.pdf"
             download
             className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
           >
             <DownloadIcon className="w-5 h-5 mr-2" />
             Download CV
-          </a>
+          </motion.a>
         </div>
 
         {/* Right content: image */}
@@ -173,7 +182,7 @@ export default function Home() {
 
           <BorderBeam duration={8} size={100} />
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 }

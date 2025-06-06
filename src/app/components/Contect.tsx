@@ -32,7 +32,7 @@ export function Contect() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl py-14 lg:text-5xl text-center font-bold text-gray-400  "
+            className="text-3xl md:text-4xl py-20 lg:text-5xl text-center font-bold text-gray-400  "
           >
             <SparklesText>Get In Touch</SparklesText>
 
