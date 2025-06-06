@@ -11,6 +11,7 @@ import Image from "next/image";
 import chat from "@/app/images/ChatGPT Image Jun 3, 2025, 11_17_59 PM.png"
 import slider from "@/app/images/ChatGPT Image Jun 5, 2025, 07_27_56 AM.png"
 import insta from "@/app/images/ChatGPT Image Jun 5, 2025, 07_41_53 AM.png"
+import pomoDoro from "@/app/images/Screenshot (18).png"
 
 export const Project = () => {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -75,8 +76,8 @@ export const Project = () => {
     {
       title: "Pomodoro App",
       description: "A productivity app that helps users manage their time with the Pomodoro technique.",
-      link: "pomodoro-timer-pi-liard.vercel.app",
-      image: "/placeholder.svg?height=300&width=400",
+      link: "https://pomodoro-timer-pi-liard.vercel.app/",
+      image: pomoDoro,
       technologies: ["React", "Tailwind CSS", "UI Design"],
       category: "Web App",
     },

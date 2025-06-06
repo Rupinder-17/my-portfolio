@@ -112,7 +112,7 @@ const SkillCard = ({ skill, description, logo, category, level, color }: any) =>
     <motion.figure
       whileHover={{ scale: 1.05, y: -5 }}
       transition={{ duration: 0.2 }}
-      className="group relative w-80 h-52 border border-gray-800 rounded-2xl p-6 shadow-2xl bg-black hover:bg-gray-950 transition-all duration-300"
+      className="group relative w-80  h-52 border border-gray-800 rounded-2xl p-6 shadow-2xl bg-black hover:bg-gray-950 transition-all duration-300"
     >
       {/* Gradient border effect */}
       <div
@@ -164,7 +164,7 @@ const SkillCard = ({ skill, description, logo, category, level, color }: any) =>
 
 export function Skills() {
   return (
-    <section id="skills" className="relative w-full   overflow-hidden bg-black">
+    <section id="skills" className="relative w-full py-10   overflow-hidden bg-black">
       {/* Subtle background pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.02),transparent_50%)]" />

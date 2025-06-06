@@ -4,20 +4,35 @@ import React from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import { SparklesText } from "@/components/magicui/sparkles-text"
+import * as z from "zod"
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
+const schema = z.object({
+  name: z.string().min(4).max(10),
+  email: z.string().email("required"),
+  message: z.string().min(5).max(15)
+})
 
 
 export function Contect() {
-
+  const { register, handleSubmit, reset, formState:{errors} } = useForm({resolver:zodResolver(schema)})
+  const onsubmit = (data:any)=>{
+    console.log(data);
+    reset()
+    
+  }
+  console.log(errors);
+  
   return (
-    <div>
+    <div id="contact">
       <AuroraBackground>
         <div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-gray-400 mb-3 py-8"
+            className="text-3xl md:text-4xl py-14 lg:text-5xl text-center font-bold text-gray-400  "
           >
             <SparklesText>Get In Touch</SparklesText>
 
@@ -26,7 +41,7 @@ export function Contect() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gray-100 text-base md:text-lg text-center max-w-2xl mx-auto px-4"
+            className="text-gray-100 text-base md:text-lg text-center max-w-2xl mx-auto "
           >
             Let's work together to bring your ideas to life
           </motion.p>
@@ -126,7 +141,7 @@ export function Contect() {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/rupinder-kaur-randhawa-762140155/"
                     className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-cyan-400 hover:bg-white/20 hover:text-cyan-300 transition-all duration-300 transform hover:scale-110"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -155,9 +170,8 @@ export function Contect() {
 
 
                 <form
-
                   className="backdrop-blur-sm h-fit  rounded-2xl p-8"
-                >
+                onClick={handleSubmit(onsubmit)} >
                   <h2 className="text-2xl font-bold text-white mb-6">Send Message</h2>
 
                   <div className="space-y-3">
@@ -168,9 +182,7 @@ export function Contect() {
                       <input
                         type="text"
                         id="name"
-                        name="name"
-                        // value={formData.name}
-                        // onChange={handleChange}
+                        {...register("name")}
                         className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all"
                         placeholder="Enter your name"
                         required
@@ -184,9 +196,7 @@ export function Contect() {
                       <input
                         type="email"
                         id="email"
-                        name="email"
-                        // value={formData.email}
-                        // onChange={handleChange}
+                        {...register("email")}
                         className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all"
                         placeholder="Enter your email"
                         required
@@ -199,9 +209,7 @@ export function Contect() {
                       </label>
                       <textarea
                         id="message"
-                        name="message"
-                        // value={formData.message}
-                        // onChange={handleChange}
+                        {...register("message")}
                         rows={5}
                         className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all resize-none"
                         placeholder="Enter your message"
@@ -229,6 +237,7 @@ export function Contect() {
 
       </AuroraBackground >
     </div>
+    
 
     // </div >
   );

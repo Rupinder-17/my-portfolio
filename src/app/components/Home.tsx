@@ -60,13 +60,16 @@ export default function Home() {
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
             Hi! I’m <span className="text-blue-400">Rupinder Kaur</span>
-          </motion.h1>
+          </motion.h1   >
 
-          <h2 className="text-xl text-gray-300 mb-4 font-medium">
+          <motion.h2 initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.4, ease: "easeOut" }} className="text-xl text-gray-300 mb-4 font-medium">
             Front-End Web Developer
-          </h2>
+          </motion.h2>
 
-          <p className="text-gray-400 mb-4 leading-relaxed">
+          < motion.p initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, ease: "easeOut" }} className="text-gray-400 mb-4 leading-relaxed">
             I specialize in building clean, responsive, and user-friendly
             interfaces using <span className="text-pink-400">React</span>,{" "}
             <span className="text-cyan-400">Tailwind CSS</span>, and more. I’ve
@@ -74,9 +77,11 @@ export default function Home() {
             always focusing on performance and smooth interaction using tools
             like <span className="text-green-400">Framer Motion</span> and{" "}
             <span className="text-yellow-300">Toastify</span>.
-          </p>
+          </motion.p>
 
-          <div className="mb-6">
+          <motion.div initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, ease: "easeOut" }} className="mb-6">
             <h3 className="text-lg font-semibold text-white mb-2">Skills</h3>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
@@ -88,9 +93,11 @@ export default function Home() {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-gray-400 mb-6">
+          <motion.div initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, ease: "easeOut" }} className="flex flex-col sm:flex-row sm:items-center gap-4 text-gray-400 mb-6">
             <div className="flex items-center">
               <MapPinIcon className="w-5 h-5 mr-2" />
               <span>Punjab, India</span>
@@ -99,9 +106,9 @@ export default function Home() {
               <CalendarIcon className="w-5 h-5 mr-2" />
               <span>Available for new projects</span>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-4 mb-6">
+          <div  className="flex gap-4 mb-6">
             <a
               href="https://github.com"
               target="_blank"
@@ -111,7 +118,7 @@ export default function Home() {
               <GithubIcon className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/rupinder-kaur-randhawa-762140155/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-purple-500 transition-colors"

@@ -4,8 +4,7 @@ import Home from "./components/Home";
 import { Project } from "./components/Project";
 import { Skills } from "./components/Skills";
 import { Contect } from "./components/Contect";
-import { About } from "./components/About";
-// import { Skills } from "@/components/Skills";
+import Footers from "./components/Footer";
 
 export default function HomePage() {
   return (
@@ -16,6 +15,7 @@ export default function HomePage() {
       <Skills/>
       <Project />
       <Contect />
+      <Footers/>
     </div>
   );
 }

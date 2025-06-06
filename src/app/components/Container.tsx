@@ -6,6 +6,6 @@ type Props = {
 }
 export const Container = ({ className = " bg-amber-50" ,children}:Props) => {
   return (
-    <div className={`h-screen w-full ${className}  overflow-hidden py-8`}>{children}</div>
+    <div className={`h-screen w-full ${className}  overflow-hidden py-11`}>{children}</div>
   )
 }
