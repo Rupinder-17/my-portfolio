@@ -16,13 +16,27 @@ const schema = z.object({
 
 
 export function Contect() {
+  const handleSubmitData = async (formData:any) => {
+    const response = await fetch("/api/contect", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+
+      },
+      body: JSON.stringify(formData)
+
+    })
+  }
   const { register, handleSubmit, reset, formState:{errors} } = useForm({resolver:zodResolver(schema)})
-  const onsubmit = (data:any)=>{
-    console.log(data);
+  const onsubmit = (formData:any)=>{
+    console.log(formData);
+    handleSubmitData(formData)
     reset()
     
   }
   console.log(errors);
+  
+  
   
   return (
     <div id="contact">

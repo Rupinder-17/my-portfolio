@@ -44,7 +44,7 @@ export const sendContactFromEmail = async (data: ContactFromData) => {
   try {
     const recipientEmails = process.env.RECIPIENT_EMAILS
       ? process.env.RECIPIENT_EMAILS.split(",")
-      : ["info@isValid.com"];
+      : [];
 
     await sendEmail({
       to: recipientEmails,
@@ -134,7 +134,6 @@ const createContactEmailTemplate = (data: ContactFromData) => {
           <h1>New Contact Form Submission</h1>
         </div>
         <div class="content">
-          <p>A new inquiry has been submitted through the iVALT contact form:</p>
           
           <div class="field">
             <div class="field-label">Name:</div>
