@@ -158,8 +158,8 @@ const createContactEmailTemplate = (data: ContactFromData) => {
           </div>
         </div>
         <div class="footer">
-          <p>This email was sent automatically from the iVALT website contact form.</p>
-          <p>&copy; ${new Date().getFullYear()} iVALT. All rights reserved.</p>
+          <p>This email was sent automatically from the  website contact form.</p>
+          <p>&copy; ${new Date().getFullYear()} All rights reserved.</p>
         </div>
       </div>
     </body>
