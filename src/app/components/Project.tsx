@@ -8,6 +8,7 @@ import quizapp from "@/app/images/QuizApp.png"
 import weather from "@/app/images/weather-App.png"
 import rider from "@/app/images/riderApp.png"
 import hrSolex from "@/app/images/hesolex.png"
+import ace from "@/app/images/ace.png"
 import Image from "next/image";
 import chat from "@/app/images/ChatGPT Image Jun 3, 2025, 11_17_59 PM.png"
 import slider from "@/app/images/ChatGPT Image Jun 5, 2025, 07_27_56 AM.png"
@@ -26,7 +27,15 @@ export const Project = () => {
       description: "A productivity app that helps users manage their time with the Pomodoro technique.",
       link: "https://www.hrsolx.com/",
       image: hrSolex,
-      technologies: ["React", "Tailwind CSS", "UI Design"],
+      technologies: ["next.js", "Tailwind CSS", "UI Design"],
+      category: "Web App",
+    },
+    {
+      title: "Acehaematolgy",
+      description: "A productivity app that helps users manage their time with the Pomodoro technique.",
+      link: "https://www.acehaematology.com/",
+      image: ace,
+      technologies: ["next.js", "Tailwind CSS", "UI Design"],
       category: "Web App",
     },
     {

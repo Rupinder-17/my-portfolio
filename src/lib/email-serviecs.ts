@@ -10,7 +10,7 @@ interface ContactFromData {
   name: string;
   email: string;
   subject?: string;
-  messege: string;
+  message: string;
 }
  export const createTransporter = () => {
   return nodemailer.createTransport({
@@ -57,6 +57,8 @@ export const sendContactFromEmail = async (data: ContactFromData) => {
   }
 };
 const createContactEmailTemplate = (data: ContactFromData) => {
+  console.log("data",data);
+  
   return `
     <!DOCTYPE html>
     <html>
@@ -154,7 +156,7 @@ const createContactEmailTemplate = (data: ContactFromData) => {
           
           <div class="field">
             <div class="field-label">Message:</div>
-            <div class="message-value"></div>
+            <div class="message-value">${data.message}</div>
           </div>
         </div>
         <div class="footer">

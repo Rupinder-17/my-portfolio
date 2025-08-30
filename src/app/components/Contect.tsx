@@ -30,6 +30,8 @@ export function Contect() {
   const { register, handleSubmit, reset, formState:{errors} } = useForm({resolver:zodResolver(schema)})
   const onsubmit = (formData:any)=>{
     console.log(formData);
+    console.log("here is error");
+    
     handleSubmitData(formData)
     reset()
     
