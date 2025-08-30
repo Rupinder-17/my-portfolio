@@ -19,21 +19,19 @@ const navItems = [
     name: "Home",
     link: "#home",
   },
-  // {
-  //   name: "About",
-  //   link: "#about",
-  // },
+  
   {
     name: "Skills",
     link: "#skills",
   },
-  {
-    name: "Contact",
-    link: "#contact",
-  },
+
   {
     name: "Project",
     link: "#projects",
+  },
+  {
+    name: "Contact",
+    link: "#contact",
   },
 ];
 
