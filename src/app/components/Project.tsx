@@ -7,6 +7,7 @@ import * as Sparkles from "@/components/ui/sparkles";
 import quizapp from "@/app/images/QuizApp.png"
 import weather from "@/app/images/weather-App.png"
 import rider from "@/app/images/riderApp.png"
+import hrSolex from "@/app/images/hesolex.png"
 import Image from "next/image";
 import chat from "@/app/images/ChatGPT Image Jun 3, 2025, 11_17_59 PM.png"
 import slider from "@/app/images/ChatGPT Image Jun 5, 2025, 07_27_56 AM.png"
@@ -20,6 +21,14 @@ export const Project = () => {
   const isInView = useInView(ref, { once: true })
 
   const projects = [
+    {
+      title: "HRsolex",
+      description: "A productivity app that helps users manage their time with the Pomodoro technique.",
+      link: "https://www.hrsolx.com/",
+      image: hrSolex,
+      technologies: ["React", "Tailwind CSS", "UI Design"],
+      category: "Web App",
+    },
     {
       title: "Quiz App",
       description: "A quiz application that provides an engaging and interactive user experience.",
@@ -81,6 +90,7 @@ export const Project = () => {
       technologies: ["React", "Tailwind CSS", "UI Design"],
       category: "Web App",
     },
+   
   ]
 
   const categories = ["All", "Web App", "Component", "Design"]
