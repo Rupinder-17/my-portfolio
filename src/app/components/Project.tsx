@@ -14,6 +14,7 @@ import chat from "@/app/images/ChatGPT Image Jun 3, 2025, 11_17_59 PM.png"
 import slider from "@/app/images/ChatGPT Image Jun 5, 2025, 07_27_56 AM.png"
 import insta from "@/app/images/ChatGPT Image Jun 5, 2025, 07_41_53 AM.png"
 import pomoDoro from "@/app/images/Screenshot (18).png"
+import AIchatbot from "@/app/images/AIchatbot.png"
 
 export const Project = () => {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -35,6 +36,14 @@ export const Project = () => {
       description: "A productivity app that helps users manage their time with the Pomodoro technique.",
       link: "https://www.acehaematology.com/",
       image: ace,
+      technologies: ["next.js", "Tailwind CSS", "UI Design"],
+      category: "Web App",
+    },
+    {
+      title: "AI-Chatbot",
+      description: "A productivity app that helps users manage their time with the Pomodoro technique.",
+      link: " https://my-ai-appp-m3uc.vercel.app/",
+      image: AIchatbot,
       technologies: ["next.js", "Tailwind CSS", "UI Design"],
       category: "Web App",
     },
