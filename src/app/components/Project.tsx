@@ -35,7 +35,7 @@ export const Project = () => {
       title: "Acehaematolgy",
       description: "A productivity app that helps users manage their time with the Pomodoro technique.",
       link: "https://www.acehaematology.com/",
-      image: ace,
+      image: ace, 
       technologies: ["next.js", "Tailwind CSS", "UI Design"],
       category: "Web App",
     },
