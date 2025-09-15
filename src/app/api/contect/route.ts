@@ -1,11 +1,12 @@
 import { sendContactFromEmail } from "@/lib/email-serviecs";
 import { NextRequest, NextResponse } from "next/server";
+import { any } from "zod";
 
 interface ContactFromData {
   name: string;
   email: string;
   subject?: string;
-  messege: string;
+  message: string;
 }
 
 
