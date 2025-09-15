@@ -25,27 +25,30 @@ export const Project = () => {
   const projects = [
     {
       title: "HRsolex",
-      description: "A productivity app that helps users manage their time with the Pomodoro technique.",
+      description: "A modern HR management platform designed to streamline employee data, attendance tracking, payroll processing, and recruitment workflows. Built with Next.js and Tailwind CSS, it offers a clean UI and efficient tools for businesses to manage their workforce effectively.",
       link: "https://www.hrsolx.com/",
       image: hrSolex,
-      technologies: ["next.js", "Tailwind CSS", "UI Design"],
+      technologies: ["Next.js", "Tailwind CSS", "UI Design"],
       category: "Web App",
+
     },
     {
-      title: "Acehaematolgy",
-      description: "A productivity app that helps users manage their time with the Pomodoro technique.",
+      title: "Acehaematology",
+      description: "A healthcare-focused web platform that provides resources, services, and information related to haematology. Built with Next.js and Tailwind CSS, it delivers a user-friendly interface for patients, doctors, and healthcare professionals to access reliable medical content and services.",
       link: "https://www.acehaematology.com/",
-      image: ace, 
-      technologies: ["next.js", "Tailwind CSS", "UI Design"],
+      image: ace,
+      technologies: ["Next.js", "Tailwind CSS", "UI Design"],
       category: "Web App",
+
     },
     {
       title: "AI-Chatbot",
-      description: "A productivity app that helps users manage their time with the Pomodoro technique.",
-      link: " https://my-ai-appp-m3uc.vercel.app/",
+      description: "An interactive AI-powered chatbot built with Next.js and Tailwind CSS. It provides real-time responses, a clean and modern UI, and can be used for tasks like answering questions, managing workflows, or enhancing customer support.",
+      link: "https://my-ai-appp-m3uc.vercel.app/",
       image: AIchatbot,
-      technologies: ["next.js", "Tailwind CSS", "UI Design"],
+      technologies: ["Next.js", "Tailwind CSS", "UI Design"],
       category: "Web App",
+
     },
     {
       title: "Quiz App",
