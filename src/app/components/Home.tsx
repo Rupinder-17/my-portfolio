@@ -77,12 +77,14 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: "easeOut" }} className="text-gray-400 mb-4 leading-relaxed">
             I specialize in building clean, responsive, and user-friendly
-            interfaces using <span className="text-pink-400">React</span>,{" "}
-            <span className="text-cyan-400">Tailwind CSS</span>, and more. I’ve
-            worked on food ordering apps, chat applications, and image sliders,
-            always focusing on performance and smooth interaction using tools
-            like <span className="text-green-400">Framer Motion</span> and{" "}
-            <span className="text-yellow-300">Toastify</span>.
+            interfaces using <span className="text-pink-400">React</span>,{" "} <span className="text-orange-500">Nextjs,</span>
+            <span className="text-cyan-400">Tailwind CSS</span>, and more. 
+            I love creating smooth interactions, modern layouts, and pixel perfect designs that feel fast and intuitive.
+            I enjoy working with UI animations, reusable components, and well structured code
+            that makes websites both beautiful and efficient.
+          
+             <span className="text-green-400">Check my work below to explore some of the  <span className="text-yellow-300">projects</span>. I’ve built.</span> {" "}
+            {/* <span className="text-yellow-300">Toastify</span>. */}
           </motion.p>
 
           <motion.div initial={{ opacity: 0, scale: 0.95 }}
@@ -154,6 +156,30 @@ export default function Home() {
             Download CV
           </motion.a>
         </div>
+        
+        {/* <div className="max-w-2xl mx-auto text-center space-y-4 px-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            Hi! I’m <span className="text-indigo-600">Rupinder Kaur</span> — Front-End Web Developer
+          </h1>
+
+          <p className="text-gray-600 leading-relaxed">
+            I focus on building clean, responsive, and user-friendly web interfaces using
+            <span className="font-medium text-gray-800"> React, Next.js, Tailwind CSS,</span> and
+            <span className="font-medium text-gray-800"> JavaScript</span>.
+            I love creating smooth interactions, modern layouts, and pixel-perfect designs that feel fast and intuitive.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed">
+            I enjoy working with UI animations, reusable components, and well-structured code
+            that makes websites both beautiful and efficient.
+          </p>
+
+          <p className="text-indigo-600 font-semibold">
+            Check my work below to explore some of the projects I’ve built.
+          </p>
+        </div> */}
+
+
 
         {/* Right content: image */}
         <div className="relative w-full rounded-lg shadow-2xl shadow-blue-900">
