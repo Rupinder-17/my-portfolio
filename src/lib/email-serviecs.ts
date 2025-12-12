@@ -16,7 +16,7 @@ interface ContactFromData {
   return nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.Email_USER,
+      user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
     },
   });
@@ -26,7 +26,7 @@ interface ContactFromData {
   try {
     const transporter = createTransporter();
     const mailOptions = {
-      from: "",
+      from: process.env.EMAIL_USER,
       to: emaildata.to,
       subject: emaildata.subject,
       html: emaildata.html,
