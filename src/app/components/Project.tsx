@@ -15,6 +15,7 @@ import slider from "@/app/images/ChatGPT Image Jun 5, 2025, 07_27_56 AM.png"
 import insta from "@/app/images/ChatGPT Image Jun 5, 2025, 07_41_53 AM.png"
 import pomoDoro from "@/app/images/Screenshot (18).png"
 import AIchatbot from "@/app/images/AIchatbot.png"
+import visa from "@/app/images/visavault.jpeg"
 
 export const Project = () => {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -28,6 +29,15 @@ export const Project = () => {
       description: "A modern HR management platform designed to streamline employee data, attendance tracking, payroll processing, and recruitment workflows. Built with Next.js and Tailwind CSS, it offers a clean UI and efficient tools for businesses to manage their workforce effectively.",
       link: "https://www.hrsolx.com/",
       image: hrSolex,
+      technologies: ["Next.js", "Tailwind CSS", "UI Design"],
+      category: "Web App",
+
+    },
+    {
+      title: "VisaVault",
+      description: "VisaVault is a modern visa management platform that simplifies application tracking, document handling, and approval workflows in one place.",
+      link: "https://www.visavault.com.au/",
+      image: visa,
       technologies: ["Next.js", "Tailwind CSS", "UI Design"],
       category: "Web App",
 
