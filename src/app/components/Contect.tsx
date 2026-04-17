@@ -43,12 +43,12 @@ export function Contect() {
   return (
     <div id="contact">
       <AuroraBackground>
-        <div>
+        <div className="px-4 sm:px-6">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl py-20 lg:text-5xl text-center font-bold text-gray-400  "
+            className="text-2xl sm:text-3xl md:text-4xl py-6 sm:py-8 lg:py-20 lg:text-5xl text-center font-bold text-gray-400"
           >
             <SparklesText>Get In Touch</SparklesText>
 
@@ -57,28 +57,28 @@ export function Contect() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gray-100 text-base md:text-lg text-center max-w-2xl mx-auto "
+            className="text-gray-100 text-sm sm:text-base md:text-lg text-center max-w-xs sm:max-w-lg md:max-w-2xl mx-auto mb-6 sm:mb-8"
           >
             Let's work together to bring your ideas to life
           </motion.p>
         </div>
 
-        <div className="flex justify-center gap-14 py-24">
+        <div className="flex flex-col lg:flex-row justify-center items-start gap-4 sm:gap-6 md:gap-8 lg:gap-14 py-6 sm:py-8 lg:py-24 px-4 sm:px-6 max-w-7xl mx-auto w-full">
 
           <motion.div
-            className="h-[] w-[40%]"
+            className="w-full lg:w-[40%] max-w-md lg:max-w-none order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full flex flex-col">
-              <h2 className="text-xl md:text-2xl font-bold text-white mb-6">Contact Information</h2>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-3 sm:p-4 md:p-6 h-full flex flex-col shadow-lg">
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 md:mb-6">Contact Information</h2>
 
-              <div className="space-y-6 flex-1">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="space-y-2 sm:space-y-3 md:space-y-6 flex-1">
+                <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-12 md:h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -87,15 +87,15 @@ export function Contect() {
                       />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-base">Email</h3>
-                    <p className="text-gray-300 text-sm break-all">rupinderrandhey90@gmail.com</p>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-white font-semibold text-xs sm:text-sm md:text-base truncate">Email</h3>
+                    <p className="text-gray-300 text-xs sm:text-xs md:text-sm break-all">rupinderrandhey90@gmail.com</p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-12 md:h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -104,15 +104,15 @@ export function Contect() {
                       />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-base">Phone</h3>
-                    <p className="text-gray-300 text-sm">+91 987654321</p>
+                  <div className="flex-1">
+                    <h3 className="text-white font-semibold text-xs sm:text-sm md:text-base">Phone</h3>
+                    <p className="text-gray-300 text-xs sm:text-xs md:text-sm">+91 987654321</p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-12 md:h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -127,22 +127,22 @@ export function Contect() {
                       />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-base">Location</h3>
-                    <p className="text-gray-300 text-sm">Punjab, Batala, India</p>
+                  <div className="flex-1">
+                    <h3 className="text-white font-semibold text-xs sm:text-sm md:text-base">Location</h3>
+                    <p className="text-gray-300 text-xs sm:text-xs md:text-sm">Punjab, Batala, India</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <h3 className="text-white font-semibold mb-4 text-base">Follow Me</h3>
-                <div className="flex space-x-3">
+              <div className="mt-2 sm:mt-3 md:mt-6 pt-2 sm:pt-3 md:pt-6 border-t border-white/10">
+                <h3 className="text-white font-semibold mb-2 sm:mb-3 md:mb-4 text-xs sm:text-sm md:text-base">Follow Me</h3>
+                <div className="flex space-x-1.5 sm:space-x-2">
                   <a
                     href="#"
-                    className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-cyan-400 hover:bg-white/20 hover:text-cyan-300 transition-all duration-300 transform hover:scale-110"
+                    className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-cyan-400 hover:bg-white/20 hover:text-cyan-300 transition-all duration-300 transform hover:scale-110"
                   >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                     </svg>
                   </a>
@@ -150,19 +150,18 @@ export function Contect() {
                     href="https://github.com/Rupinder-17/Rupinder-17"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-cyan-400 hover:bg-white/20 hover:text-cyan-300 transition-all duration-300 transform hover:scale-110"
+                    className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-cyan-400 hover:bg-white/20 hover:text-cyan-300 transition-all duration-300 transform hover:scale-110"
                   >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                     </svg>
                   </a>
                   <a
-                    // href="https://www.linkedin.com/in/rupinder-kaur-randhawa-762140155/"
                     href="https://www.linkedin.com/in/rupinder-kaur-762140155"
                     target="_blank"
-                    className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-cyan-400 hover:bg-white/20 hover:text-cyan-300 transition-all duration-300 transform hover:scale-110"
+                    className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-cyan-400 hover:bg-white/20 hover:text-cyan-300 transition-all duration-300 transform hover:scale-110"
                   >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                   </a>
@@ -180,19 +179,20 @@ export function Contect() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="relative w-[35%] "
+            className="w-full lg:w-[35%] max-w-md"
           >
             <div className=" bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden">
-              <div className="p-2 md:p-12">
+              <div className="p-3 sm:p-4 md:p-6 lg:p-8">
                 <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
 
 
                 <form
-                  className="backdrop-blur-sm h-fit  rounded-2xl p-8"
-                onClick={handleSubmit(onsubmit)} >
-                  <h2 className="text-2xl font-bold text-white mb-6">Send Message</h2>
+                  className="backdrop-blur-sm h-fit rounded-2xl p-2 sm:p-3 md:p-4 lg:p-6"
+                  onSubmit={handleSubmit(onsubmit)}
+                >
+                  <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 md:mb-4 lg:mb-6">Send Message</h2>
 
-                  <div className="space-y-3">
+                  <div className="space-y-2 sm:space-y-3 md:space-y-3">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Your Name
@@ -201,7 +201,7 @@ export function Contect() {
                         type="text"
                         id="name"
                         {...register("name")}
-                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all"
+                        className="w-full px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all text-xs sm:text-sm"
                         placeholder="Enter your name"
                         required
                       />
@@ -215,7 +215,7 @@ export function Contect() {
                         type="email"
                         id="email"
                         {...register("email")}
-                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all"
+                        className="w-full px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all text-xs sm:text-sm"
                         placeholder="Enter your email"
                         required
                       />
@@ -228,8 +228,8 @@ export function Contect() {
                       <textarea
                         id="message"
                         {...register("message")}
-                        rows={5}
-                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all resize-none"
+                        rows={2}
+                        className="w-full px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all resize-none text-xs sm:text-sm"
                         placeholder="Enter your message"
                         required
                       />
@@ -237,7 +237,7 @@ export function Contect() {
 
                     <button
                       type="submit"
-                      className="w-full py-3 px-6 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/30 hover:bg-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-105"
+                      className="w-full py-1.5 sm:py-2 md:py-3 px-3 sm:px-4 md:px-6 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/30 hover:bg-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-105 text-xs sm:text-sm"
                     >
                       Send Message
                     </button>
