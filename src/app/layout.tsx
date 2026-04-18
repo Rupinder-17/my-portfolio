@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rupinder Kaur - Frontend Developer",
-    description: "Frontend developer creating modern web experiences with React and Next.js",
+    title: "Rupinder Kaur - softwere Developer",
+    description: "softwere developer creating modern web experiences with React and Next.js",
     images: ["https://rupinder.tech/og-image.jpg"],
     creator: "@rupinderkaur",
   },
@@ -73,11 +73,11 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Rupinder Kaur",
-  jobTitle: "Frontend Developer",
+  jobTitle: "Softwere Developer",
   url: "https://rupinder.tech",
   sameAs: [
-    "https://github.com/yourusername",
-    "https://linkedin.com/in/yourusername",
+    "https://github.com/Rupinder-17",
+    "https://linkedin.com/in/Rupinder Kaur",
     "https://twitter.com/rupinderkaur",
   ],
   worksFor: {
