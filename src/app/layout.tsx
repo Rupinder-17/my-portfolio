@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Rupinder Kaur - Frontend Developer",
-    description: "Frontend developer creating modern web experiences with React and Next.js",
+    description: "web developer creating modern web experiences with React and Next.js",
     type: "website",
     locale: "en_US",
     url: "https://rupinder.tech",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: "https://rupinder.tech/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rupinder Kaur - Frontend Developer Portfolio",
+        alt: "Rupinder Kaur - web Developer Portfolio",
       },
     ],
   },
