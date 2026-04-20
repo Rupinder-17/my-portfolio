@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: " web Developer | React & Next.js Expert , Gurdaspur, Batala",
-  description: "web developer specializing in React, Next.js, and modern web technologies. Building responsive, user friendly interfaces with clean code and exceptional UX.",
-  keywords: ["web Developer", "React Developer", "Next.js", "TypeScript", "Tailwind CSS", "Web Development", "UI/UX"],
+  title: "Rupinder Kaur - Frontend Developer | React & Next.js Expert, Gurdaspur, Batala",
+  description: "Frontend developer specializing in React, Next.js, and modern web technologies. Building responsive, user-friendly interfaces with clean code and exceptional UX.",
+  keywords: ["Frontend Developer", "React Developer", "Next.js", "TypeScript", "Tailwind CSS", "Web Development", "UI/UX", "Rupinder Kaur", "Gurdaspur", "Batala"],
   authors: [{ name: "Rupinder Kaur Developer" }],
   icons: {
     icon: "/favicon.ico",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Rupinder Kaur - Frontend Developer",
-    description: "web developer creating modern web experiences with React and Next.js",
+    description: "Frontend developer creating modern web experiences with React and Next.js",
     type: "website",
     locale: "en_US",
     url: "https://rupinder.tech",
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
         url: "https://rupinder.tech/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rupinder Kaur - web Developer Portfolio",
+        alt: "Rupinder Kaur - Frontend Developer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rupinder Kaur - softwere Developer",
-    description: "softwere developer creating modern web experiences with React and Next.js",
+    title: "Rupinder Kaur - Frontend Developer",
+    description: "Frontend developer creating modern web experiences with React and Next.js",
     images: ["https://rupinder.tech/og-image.jpg"],
     creator: "@rupinderkaur",
   },
@@ -73,11 +73,11 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Rupinder Kaur",
-  jobTitle: "Softwere Developer",
+  jobTitle: "Frontend Developer",
   url: "https://rupinder.tech",
   sameAs: [
     "https://github.com/Rupinder-17",
-    "https://linkedin.com/in/Rupinder Kaur",
+    "https://linkedin.com/in/rupinder-kaur",
     "https://twitter.com/rupinderkaur",
   ],
   worksFor: {
