@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rupinder Kaur - Frontend Developer | React & Next.js Expert , Gurdaspur, Batala",
-  description: "Frontend developer specializing in React, Next.js, and modern web technologies. Building responsive, user friendly interfaces with clean code and exceptional UX.",
-  keywords: ["Frontend Developer", "React Developer", "Next.js", "TypeScript", "Tailwind CSS", "Web Development", "UI/UX"],
+  title: " web Developer | React & Next.js Expert , Gurdaspur, Batala",
+  description: "web developer specializing in React, Next.js, and modern web technologies. Building responsive, user friendly interfaces with clean code and exceptional UX.",
+  keywords: ["web Developer", "React Developer", "Next.js", "TypeScript", "Tailwind CSS", "Web Development", "UI/UX"],
   authors: [{ name: "Rupinder Kaur Developer" }],
   icons: {
     icon: "/favicon.ico",
