@@ -12,8 +12,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://rupinder.tech"),
 
@@ -87,7 +85,7 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    google: "ADD_YOUR_REAL_GOOGLE_CODE",
+    google: "LviVTmatNBaA99kxtsaTXY-TQDejB8gl-O8zGBHDDN4",
   },
 
   category: "technology",
