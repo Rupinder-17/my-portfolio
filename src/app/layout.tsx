@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rupinder.tech"),
 
   title: {
-    default: "Rupinder Kaur | Frontend Developer (React, Next.js)",
+    default: "Rupinder Kaur | Frontend Developer (React, Next.js) in batala punjab",
     template: "%s | Rupinder Kaur",
   },
 
