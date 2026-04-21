@@ -12,44 +12,71 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "Rupinder Kaur - Frontend Developer | React & Next.js Expert, Gurdaspur, Batala",
-  description: "Frontend developer specializing in React, Next.js, and modern web technologies. Building responsive, user-friendly interfaces with clean code and exceptional UX.",
-  keywords: ["Frontend Developer", "React Developer", "Next.js", "TypeScript", "Tailwind CSS", "Web Development", "UI/UX", "Rupinder Kaur", "Gurdaspur", "Batala"],
-  authors: [{ name: "Rupinder Kaur Developer" }],
+  metadataBase: new URL("https://rupinder.tech"),
+
+  title: {
+    default: "Rupinder Kaur | Frontend Developer (React, Next.js)",
+    template: "%s | Rupinder Kaur",
+  },
+
+  description:
+    "Rupinder Kaur is a frontend developer specializing in React, Next.js, and Tailwind CSS. Builds fast, responsive, and user-friendly web applications.",
+
+  keywords: [
+    "Rupinder Kaur",
+    "Frontend Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Tailwind CSS",
+    "Web Developer in Punjab",
+    "JavaScript Developer",
+  ],
+
+  authors: [{ name: "Rupinder Kaur" }],
+  creator: "Rupinder Kaur",
+
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
   },
+
+  alternates: {
+    canonical: "https://rupinder.tech",
+  },
+
   openGraph: {
-    title: "Rupinder Kaur - Frontend Developer",
-    description: "Frontend developer creating modern web experiences with React and Next.js",
-    type: "website",
-    locale: "en_US",
+    title: "Rupinder Kaur | Frontend Developer",
+    description:
+      "Frontend developer building modern web apps using React, Next.js, and Tailwind CSS.",
     url: "https://rupinder.tech",
     siteName: "Rupinder Kaur Portfolio",
     images: [
       {
-        url: "https://rupinder.tech/og-image.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rupinder Kaur - Frontend Developer Portfolio",
+        alt: "Rupinder Kaur Portfolio",
       },
     ],
+    locale: "en_IN",
+    type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Rupinder Kaur - Frontend Developer",
-    description: "Frontend developer creating modern web experiences with React and Next.js",
-    images: ["https://rupinder.tech/og-image.jpg"],
+    title: "Rupinder Kaur | Frontend Developer",
+    description:
+      "Frontend developer specializing in React, Next.js, and modern UI development.",
+    images: ["/og-image.jpg"],
     creator: "@rupinderkaur",
   },
-  alternates: {
-    canonical: "https://rupinder.tech",
-  },
+
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -58,11 +85,13 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
-};
 
+  verification: {
+    google: "ADD_YOUR_REAL_GOOGLE_CODE",
+  },
+
+  category: "technology",
+};
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
