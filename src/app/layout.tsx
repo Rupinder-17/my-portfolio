@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rupinder.tech"),
 
   title: {
-    default: "Rupinder Kaur | Frontend Developer (React, Next.js) in batala punjab",
+    default: "softwere Developer (React, Next.js) in batala punjab ",
     template: "%s | Rupinder Kaur",
   },
 
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Rupinder Kaur | Frontend Developer",
+    title: "Rupinder Kaur | softwere Developer",
     description:
-      "Frontend developer building modern web apps using React, Next.js, and Tailwind CSS.",
+      "software developer building modern web apps using React, Next.js, and Tailwind CSS.",
     url: "https://rupinder.tech",
     siteName: "Rupinder Kaur Portfolio",
     images: [
@@ -64,9 +64,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Rupinder Kaur | Frontend Developer",
+    title: "Rupinder Kaur | softwere Developer",
     description:
-      "Frontend developer specializing in React, Next.js, and modern UI development.",
+      "softwere developer specializing in React, Next.js, and modern UI development.",
     images: ["/og-image.jpg"],
     creator: "@rupinderkaur",
   },
@@ -100,7 +100,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Rupinder Kaur",
-  jobTitle: "Frontend Developer",
+  jobTitle: "softwere Developer",
   url: "https://rupinder.tech",
   sameAs: [
     "https://github.com/Rupinder-17",
