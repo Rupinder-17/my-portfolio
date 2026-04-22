@@ -29,18 +29,6 @@ const skills = [
   "TypeScript",
   "Node.js",
 ];
-// import * as card from "../../components/ui/card";
-// const code = `\`\`\`js
-// const rupinderKaurDetails = [
-//   {
-//     name: "Rupinder Kaur",
-//     profession: "Developer",
-//     interests: ["Innovative software solutions", "Efficient coding"],
-//     skills: ["HTML", "CSS", "JavaScript", "React", "GitHub , Tailwind css"]
-//   }
-// ];
-// \`\`\``;
-
 export default function Home() {
   return (
     <Container className="relative w-full overflow-hidden items-center justify-center bg-slate-900 flex flex-col  px-6 py-16 rounded-2xl shadow-xl">
@@ -70,7 +58,7 @@ export default function Home() {
 
           <motion.h2 initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.4, ease: "easeOut" }} className="text-xl text-gray-300 mb-4 font-medium">
-            Front-End Web Developer
+            Software Developer
           </motion.h2>
 
           < motion.p initial={{ opacity: 0, scale: 0.95 }}
@@ -118,9 +106,10 @@ export default function Home() {
 
           <div  className="flex gap-4 mb-6">
             <a
-              href="https://github.com"
+              href="https://github.com/Rupinder-17"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub Profile"
               className="text-gray-400 hover:text-purple-500 transition-colors"
             >
               <GithubIcon className="w-6 h-6" />
@@ -129,14 +118,16 @@ export default function Home() {
               href="https://www.linkedin.com/in/rupinder-kaur-randhawa-762140155/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
               className="text-gray-400 hover:text-purple-500 transition-colors"
             >
               <LinkedinIcon className="w-6 h-6" />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/rupinderkaur"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Twitter Profile"
               className="text-gray-400 hover:text-purple-500 transition-colors"
             >
               <TwitterIcon className="w-6 h-6" />
