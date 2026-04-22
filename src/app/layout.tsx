@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rupinder.tech"),
 
   title: {
-    default: "softwere Developer (React, Next.js) in batala punjab ",
+    default: "softwere Developer expert in  React, Next.js  ",
     template: "%s | Rupinder Kaur",
   },
 
   description:
-    "Rupinder Kaur is a frontend developer specializing in React, Next.js, and Tailwind CSS. Builds fast, responsive, and user-friendly web applications.",
+    "Rupinder Kaur is a software developer specializing in React, Next.js, and Tailwind CSS. Builds fast, responsive, and user friendly applications.",
 
   keywords: [
     "Rupinder Kaur",
@@ -31,6 +31,8 @@ export const metadata: Metadata = {
     "Tailwind CSS",
     "Web Developer in Punjab",
     "JavaScript Developer",
+    "Batala Punjab",
+    "Gurdaspur",
   ],
 
   authors: [{ name: "Rupinder Kaur" }],
