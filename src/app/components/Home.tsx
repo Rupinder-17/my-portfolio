@@ -148,30 +148,7 @@ export default function Home() {
           </motion.a>
         </div>
         
-        {/* <div className="max-w-2xl mx-auto text-center space-y-4 px-4">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
-            Hi! I’m <span className="text-indigo-600">Rupinder Kaur</span> — Front-End Web Developer
-          </h1>
-
-          <p className="text-gray-600 leading-relaxed">
-            I focus on building clean, responsive, and user-friendly web interfaces using
-            <span className="font-medium text-gray-800"> React, Next.js, Tailwind CSS,</span> and
-            <span className="font-medium text-gray-800"> JavaScript</span>.
-            I love creating smooth interactions, modern layouts, and pixel-perfect designs that feel fast and intuitive.
-          </p>
-
-          <p className="text-gray-600 leading-relaxed">
-            I enjoy working with UI animations, reusable components, and well-structured code
-            that makes websites both beautiful and efficient.
-          </p>
-
-          <p className="text-indigo-600 font-semibold">
-            Check my work below to explore some of the projects I’ve built.
-          </p>
-        </div> */}
-
-
-
+        
         {/* Right content: image */}
         <div className="relative w-full rounded-lg shadow-2xl shadow-blue-900">
           <div className="">
