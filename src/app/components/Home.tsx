@@ -58,7 +58,7 @@ export default function Home() {
 
           <motion.h2 initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.4, ease: "easeOut" }} className="text-xl text-gray-300 mb-4 font-medium">
-            Software Developer
+            Full Stack Developer
           </motion.h2>
 
           < motion.p initial={{ opacity: 0, scale: 0.95 }}

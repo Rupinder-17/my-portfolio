@@ -16,16 +16,16 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rupinder.tech"),
 
   title: {
-    default: "softwere Developer expert in  React, Next.js  ",
+    default: "Full Stack Developer | React, Next.js Expert",
     template: "%s | Rupinder Kaur",
   },
 
   description:
-    "Rupinder Kaur is a software developer specializing in React, Next.js, and Tailwind CSS. Builds fast, responsive, and user friendly applications.",
+    "Rupinder Kaur is a Full Stack Developer specializing in React, Next.js, and Tailwind CSS. Builds fast, responsive, and user-friendly web applications.",
 
   keywords: [
     "Rupinder Kaur",
-    "Frontend Developer",
+    "Full Stack Developer",
     "React Developer",
     "Next.js Developer",
     "Tailwind CSS",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Rupinder Kaur | softwere Developer",
+    title: "Rupinder Kaur | Full Stack Developer",
     description:
-      "software developer building modern web apps using React, Next.js, and Tailwind CSS.",
+      "Full Stack Developer building modern web apps using React, Next.js, and Tailwind CSS.",
     url: "https://rupinder.tech",
     siteName: "Rupinder Kaur Portfolio",
     images: [
@@ -66,9 +66,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Rupinder Kaur | softwere Developer",
+    title: "Rupinder Kaur | Full Stack Developer",
     description:
-      "softwere developer specializing in React, Next.js, and modern UI development.",
+      "Full Stack Developer specializing in React, Next.js, and modern web development.",
     images: ["/og-image.jpg"],
     creator: "@rupinderkaur",
   },
@@ -102,7 +102,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Rupinder Kaur",
-  jobTitle: "softwere Developer",
+  jobTitle: "Full Stack Developer",
   url: "https://rupinder.tech",
   sameAs: [
     "https://github.com/Rupinder-17",
