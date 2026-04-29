@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rupinder.tech"),
 
   title: {
-    default: "Full Stack Developer | React, Next.js Expert",
+    default: "Rupinder kaur - Full Stack web Developer | React, Next.js Expert",
     template: "%s | Rupinder Kaur",
   },
 
   description:
-    "Rupinder Kaur is a Full Stack Developer specializing in React, Next.js, and Tailwind CSS. Builds fast, responsive, and user-friendly web applications.",
+    "Rupinder Kaur is a Full Stack web Developer specializing in React, Next.js, and Tailwind CSS. Builds fast, responsive, and user-friendly web applications.",
 
   keywords: [
     "Rupinder Kaur",
