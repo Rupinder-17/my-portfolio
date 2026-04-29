@@ -102,7 +102,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Rupinder Kaur",
-  jobTitle: "Full Stack Developer",
+  jobTitle: "Full Stack web Developer",
   url: "https://rupinder.tech",
   sameAs: [
     "https://github.com/Rupinder-17",
