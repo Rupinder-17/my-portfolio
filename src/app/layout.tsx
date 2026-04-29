@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rupinder.tech"),
 
   title: {
-    default: "Rupinder kaur - Full Stack web Developer | React, Next.js Expert",
+    default: "Rupinder kaur - Full Stack web Developer in batala| React, Next.js Expert",
     template: "%s | Rupinder Kaur",
   },
 
