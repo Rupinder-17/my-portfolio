@@ -89,6 +89,7 @@ export const metadata: Metadata = {
 
   verification: {
     google: "LviVTmatNBaA99kxtsaTXY-TQDejB8gl-O8zGBHDDN4",
+    facebook: "be1j1oa9n23rmq9i9b4bktgwm3vsio",
   },
 
   category: "technology",
