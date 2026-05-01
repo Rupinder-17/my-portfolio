@@ -143,7 +143,7 @@ export default function RootLayout({
         />
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1711480999476267&ev=PageView&noscript=1" />`,
+            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1613045536642612&ev=PageView&noscript=1" />`,
           }}
         />
         <script
