@@ -89,7 +89,6 @@ export const metadata: Metadata = {
 
   verification: {
     google: "LviVTmatNBaA99kxtsaTXY-TQDejB8gl-O8zGBHDDN4",
-    facebook: "be1j1oa9n23rmq9i9b4bktgwm3vsio",
   },
 
   category: "technology",
@@ -127,6 +126,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="facebook-domain-verification" content="be1j1oa9n23rmq9i9b4bktgwm3vsio" />
         <Script
           id="facebook-pixel"
   strategy="afterInteractive"
