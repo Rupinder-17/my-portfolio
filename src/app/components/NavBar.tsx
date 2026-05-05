@@ -57,22 +57,22 @@ export const NavBar1 = () => {
           <Image src={logo} alt=""height={55} width={45} className="rounded-4xl"/>
 
           <div className="flex items-center gap-6">
-            {navItems.map((item, idx) => (
+            {navItems?.map((item, idx) => (
               <a
                 key={`desktop-link-${idx}`}
                 href={item.link}
                onClick={() => {
                   if (typeof window !== "undefined" && window.fbq) {
                    window.fbq("trackCustom", "NavbarClick", {
-                       button_name: item.name,
+                       button_name: item?.name,
                       });
                        } else {
                   console.log("Pixel not loaded");
                      }
                      }}
-                className="relative text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                className="relative text-gray-400 dark:text-neutral-300 hover:text-white dark:hover:text-neutral-100 transition-colors"
               >
-                <span className="block">{item.name}</span>
+                <span className="block">{item?.name}</span>
               </a>
             ))}
           </div>
