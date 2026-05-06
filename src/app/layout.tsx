@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import FacebookPixel from "./components/FacebookPixel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -128,27 +127,10 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="facebook-domain-verification" content="be1j1oa9n23rmq9i9b4bktgwm3vsio" />
-        {/* <Script
-          id="facebook-pixel"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];
-      t=b.createElement(e);t.async=!0;
-      t.src=v;
-      s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)
-    }(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1613045536642612');
-    fbq('track', 'PageView');
-    `,
-  }}
+        <Script
+          src="/script/pixel.js"
+          data-pixel-id={process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}
+          strategy="afterInteractive"
         />
         <noscript
           dangerouslySetInnerHTML={{
@@ -158,13 +140,12 @@ export default function RootLayout({
         <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        /> */}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <FacebookPixel />
       </body>
     </html>
   );
