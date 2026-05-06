@@ -1,4 +1,4 @@
-const PIXEL_ID = document.currentScript.getAttribute("data-pixel-id");
+const PIXEL_ID = document.currentScript?.getAttribute("data-pixel-id");
 
 function initializeFacebookPixel(f, b, e, v, n, t, s) {
   if (f.fbq) return;
@@ -24,5 +24,9 @@ initializeFacebookPixel(
   "https://connect.facebook.net/en_US/fbevents.js",
 );
 
-window.fbq("init", PIXEL_ID);
-window.fbq("track", "PageView");
+if (!PIXEL_ID) {
+  console.error("[Pixel] Missing data-pixel-id. Check NEXT_PUBLIC_FACEBOOK_PIXEL_ID in .env");
+} else {
+  window.fbq("init", PIXEL_ID);
+  window.fbq("track", "PageView");
+}
