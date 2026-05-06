@@ -128,7 +128,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="facebook-domain-verification" content="be1j1oa9n23rmq9i9b4bktgwm3vsio" />
-        <Script
+        {/* <Script
           id="facebook-pixel"
   strategy="afterInteractive"
   dangerouslySetInnerHTML={{
@@ -158,7 +158,7 @@ export default function RootLayout({
         <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        /> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
