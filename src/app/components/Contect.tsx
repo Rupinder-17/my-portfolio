@@ -106,7 +106,7 @@ export function Contect() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-white font-semibold text-xs sm:text-sm md:text-base">Phone</h3>
-                    <p className="text-gray-300 text-xs sm:text-xs md:text-sm">+91 987654321</p>
+                    <p className="text-gray-300 text-xs sm:text-xs md:text-sm">+91  95306 54704</p>
                   </div>
                 </div>
 
