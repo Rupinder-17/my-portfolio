@@ -9,9 +9,9 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 const schema = z.object({
-  name: z.string().min(4).max(10),
-  email: z.string().email("required"),
-  message: z.string().min(5).max(15)
+  name: z.string().min(2, "Name must be at least 2 characters").max(50, "Name is too long"),
+  email: z.string().email("Please enter a valid email"),
+  message: z.string().min(5, "Message must be at least 5 characters").max(500, "Message is too long")
 })
 
 
@@ -235,6 +235,9 @@ export function Contect() {
                         placeholder="Enter your name"
                         required
                       />
+                      {errors.name && (
+                        <p className="mt-1 text-xs text-red-300">{errors.name.message}</p>
+                      )}
                     </div>
 
                     <div>
@@ -249,6 +252,9 @@ export function Contect() {
                         placeholder="Enter your email"
                         required
                       />
+                      {errors.email && (
+                        <p className="mt-1 text-xs text-red-300">{errors.email.message}</p>
+                      )}
                     </div>
 
                     <div>
@@ -263,6 +269,9 @@ export function Contect() {
                         placeholder="Enter your message"
                         required
                       />
+                      {errors.message && (
+                        <p className="mt-1 text-xs text-red-300">{errors.message.message}</p>
+                      )}
                     </div>
 
                     <button
