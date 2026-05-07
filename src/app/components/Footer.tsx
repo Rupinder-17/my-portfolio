@@ -262,7 +262,7 @@ import { motion } from "framer-motion";
                 className="flex items-center space-x-6"
               >
                 <a
-                  href="#"
+                  href="/privacy"
                   className="text-gray-400 hover:text-cyan-400 text-sm transition-colors"
                 >
                   Privacy Policy
