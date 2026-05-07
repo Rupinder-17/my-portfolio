@@ -23,38 +23,39 @@ interface ContactFromData {
 };
 
  export const sendEmail = async (emaildata: EmailData) => {
-  try {
-    const transporter = createTransporter();
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: emaildata.to,
-      subject: emaildata.subject,
-      html: emaildata.html,
-      text: emaildata.text,
-      replyTo: emaildata.replyTo,
-    };
-    const info = await transporter.sendMail(mailOptions);
-    console.log(info.messageId);
-  } catch (error) {
-    console.log(error);
-  }
+  const transporter = createTransporter();
+  const mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: emaildata.to,
+    subject: emaildata.subject,
+    html: emaildata.html,
+    text: emaildata.text,
+    replyTo: emaildata.replyTo,
+  };
+  const info = await transporter.sendMail(mailOptions);
+  console.log("Email sent:", info.messageId);
+  return info;
 };
 
 export const sendContactFromEmail = async (data: ContactFromData) => {
-  try {
-    const recipientEmails = process.env.RECIPIENT_EMAILS
-      ? process.env.RECIPIENT_EMAILS.split(",")
-      : [];
-
-    await sendEmail({
-      to: recipientEmails,
-      subject: `New Contact Form Submission: ${data.subject}`,
-      html: createContactEmailTemplate(data),
-      replyTo: data.email,
-    });
-  } catch (e) {
-    console.log(e);
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    throw new Error("Missing EMAIL_USER or EMAIL_PASS environment variables");
   }
+
+  const recipientEmails = process.env.RECIPIENT_EMAILS
+    ? process.env.RECIPIENT_EMAILS.split(",").map(s => s.trim()).filter(Boolean)
+    : [];
+
+  if (recipientEmails.length === 0) {
+    throw new Error("Missing RECIPIENT_EMAILS environment variable");
+  }
+
+  await sendEmail({
+    to: recipientEmails,
+    subject: `New Contact Form Submission from ${data.name}`,
+    html: createContactEmailTemplate(data),
+    replyTo: data.email,
+  });
 };
 const createContactEmailTemplate = (data: ContactFromData) => {
   console.log("data",data);

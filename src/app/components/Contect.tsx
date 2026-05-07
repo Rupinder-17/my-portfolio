@@ -17,6 +17,7 @@ const schema = z.object({
 
 export function Contect() {
   const [successMsg, setSuccessMsg] = useState<string | null>(null);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const handleSubmitData = async (formData:any) => {
     const response = await fetch("/api/contect", {
@@ -38,9 +39,14 @@ export function Contect() {
     const res = await handleSubmitData(formData);
     if (res.ok) {
       setSuccessMsg("Your message has been sent!");
+      setErrorMsg(null);
       setTimeout(() => setSuccessMsg(null), 4000);
+      reset();
+    } else {
+      setErrorMsg("Failed to send message. Please try again later.");
+      setSuccessMsg(null);
+      setTimeout(() => setErrorMsg(null), 5000);
     }
-    reset()
 
   }
   console.log(errors);
@@ -273,6 +279,15 @@ export function Contect() {
                         className="mt-3 p-3 rounded-lg bg-green-500/20 border border-green-400/40 text-green-100 text-sm text-center backdrop-blur-sm"
                       >
                         {successMsg}
+                      </motion.div>
+                    )}
+                    {errorMsg && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-3 p-3 rounded-lg bg-red-500/20 border border-red-400/40 text-red-100 text-sm text-center backdrop-blur-sm"
+                      >
+                        {errorMsg}
                       </motion.div>
                     )}
                   </div>
