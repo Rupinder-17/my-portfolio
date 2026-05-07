@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import React from "react";
+import React, { useState } from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import { SparklesText } from "@/components/magicui/sparkles-text"
@@ -16,6 +16,8 @@ const schema = z.object({
 
 
 export function Contect() {
+  const [successMsg, setSuccessMsg] = useState<string | null>(null);
+
   const handleSubmitData = async (formData:any) => {
     const response = await fetch("/api/contect", {
       method: "POST",
@@ -26,15 +28,20 @@ export function Contect() {
       body: JSON.stringify(formData)
 
     })
+    return response;
   }
   const { register, handleSubmit, reset, formState:{errors} } = useForm({resolver:zodResolver(schema)})
-  const onsubmit = (formData:any)=>{
+  const onsubmit = async (formData:any)=>{
     console.log(formData);
     console.log("here is error");
-    
-    handleSubmitData(formData)
+
+    const res = await handleSubmitData(formData);
+    if (res.ok) {
+      setSuccessMsg("Your message has been sent!");
+      setTimeout(() => setSuccessMsg(null), 4000);
+    }
     reset()
-    
+
   }
   console.log(errors);
   
@@ -241,6 +248,16 @@ export function Contect() {
                     >
                       Send Message
                     </button>
+
+                    {successMsg && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-3 p-3 rounded-lg bg-green-500/20 border border-green-400/40 text-green-100 text-sm text-center backdrop-blur-sm"
+                      >
+                        {successMsg}
+                      </motion.div>
+                    )}
                   </div>
                 </form>
                 {/* </motion.div> */}
